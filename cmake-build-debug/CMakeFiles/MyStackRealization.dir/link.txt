@@ -1,0 +1,2 @@
+/usr/bin/ar qc libMyStackRealizationd.a  CMakeFiles/MyStackRealization.dir/sources/Stack.cpp.o
+/usr/bin/ranlib libMyStackRealizationd.a
