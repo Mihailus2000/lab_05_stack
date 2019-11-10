@@ -6,38 +6,59 @@
 #define MYSTACKREALIZATION_NOCOPYABLESTACK_HPP
 
 #include <iostream>
+#include <StackException.hpp>
+
+template <typename T>
+struct Node{
+    T value;
+    Node<T> *prevElement = nullptr; // Указатель на предыдущий элемент стека
+};
 
 template <typename T>
 class NoCopyableStack{
 private:
-    struct Node{
-        Node *prevElement; // Указатель на предыдущий элемент стека
-        T value;
-        Node() = default;
-        Node(T val){
-            value = val;
-            prevElement = nullptr;
-        }
-    };
+    Node<T> *topElement = nullptr;
+//    int count = 0; // Счётчик элементов стека. TODO 0 or 1?
 
-    Node *topElement = new Node();
-    int count = 0; // Счётчик элементов стека. TODO 0 or 1?
 public:
+
     explicit NoCopyableStack() = default;
-    virtual  ~NoCopyableStack() = default;
+    virtual ~NoCopyableStack() = default;
+    NoCopyableStack(const NoCopyableStack &stack) = delete;
+    NoCopyableStack &operator=(const NoCopyableStack &stack) = delete;
+    NoCopyableStack(NoCopyableStack &&stack) noexcept = default;
+
     template <typename ... Args>
     void push_emplace(Args&&... value){
-        T *newContainedElem = new T(std::forward<Args>(value)...);
-        Node* newElem = new Node(std::move(*newContainedElem));
-        newElem->prevElement = topElement;
-        topElement = std::move(newElem);
+        auto* prevEl = topElement;
+        topElement = new Node<T>{{std::forward<Args>(value)...},
+                                 prevEl
+                                };
     }
+
     void push(T&& value){
-
+        auto* prevNode = topElement;
+        topElement = new Node<T>{std::forward<T>(value), prevNode};
     }
-    const T& head() const;
-    T pop(){
 
+    const T& head() const{
+        if(!topElement){
+            throw StackException("Stack is empty");
+        }
+        return topElement->value;
+    }
+
+    T pop(){
+        if(!topElement){
+            throw StackException("Stack is empty");
+        }
+
+        auto prevNode = topElement;
+        topElement = topElement->prevElement;
+
+        T value = std::move(prevNode->value);
+        delete prevNode;
+        return value;
     }
 };
 

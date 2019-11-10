@@ -6,7 +6,6 @@
 #define MYSTACKREALIZATION_STACKEXCEPTION_HPP
 
 #include <exception>
-#include <itclIntDecls.h>
 #include <string>
 
 

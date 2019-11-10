@@ -8,58 +8,47 @@
 #include "StackException.hpp"
 
 template <typename T>
+struct NoCopyNode{
+    T value;
+    NoCopyNode<T> *prevElement = nullptr; // Указатель на предыдущий элемент стека
+};
+
+template <typename T>
 class Stack{
 private:
-    struct Node{
-        Node *prevElement; // Указатель на предыдущий элемент стека
-        T value;
-        Node() = default;
-        Node(T val){
-            value = val;
-            prevElement = nullptr;
-        }
-    };
 
-    Node *topElement = new Node();
-    int count = 0; // Счётчик элементов стека. TODO 0 or 1?
+
+    NoCopyNode<T> *topElement = nullptr;
+//    int count = 0; // Счётчик элементов стека. TODO 0 or 1?
 public:
     Stack() = default;
     virtual ~Stack() = default;
+    Stack(const Stack &stack) = delete;
+    Stack &operator=(const Stack &stack) = delete;
+    Stack(Stack &&stack) noexcept = default;
+
 
     void push(T&& value){
-        Node * newElement = new Node(std::forward<T>(value));
-        if(count == 0)
-            topElement = newElement;
-        else{
-            newElement->prevElement = topElement;
-            topElement = newElement;
-        }
-        count++;
+        auto* prevElem = topElement;
+        topElement = new NoCopyNode<T>{std::forward<T>(value), prevElem,};
     }
 
     void push(const T& value){
-        Node * newElement = new Node(value);
-        if(count == 0)
-            topElement = std::move(newElement);
-        else{
-            newElement->prevElement = topElement;
-            topElement = std::move(newElement);
-        }
-        count++;
+        auto* prevElem = topElement;
+        topElement = new NoCopyNode<T>{value, prevElem,};
     }
     void pop(){
-        if(count != 0){
-            Node * temp = topElement;
-            topElement = topElement->prevElement;
-            delete temp;
-            count--;
+        if(!topElement){
+            throw StackException("Stack is empty");
         }
-        else{
-            throw StackException("The stack is empty!\n\n");
-        }
+
+        topElement = topElement->prevElement;
     }
     const T& head() const{
-        return &topElement->value;
+        if (!topElement) {
+            throw StackException("Stack is empty");
+        }
+        return topElement->value;
     }
 
 
