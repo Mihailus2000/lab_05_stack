@@ -18,6 +18,11 @@
 -- [hunter] HUNTER_ROOT: /home/mihail/.hunter
 -- [hunter] [ Hunter-ID: 9a3594a | Toolchain-ID: 70e2fd0 | Config-ID: 48401e9 ]
 -- [hunter] GTEST_ROOT: /home/mihail/.hunter/_Base/9a3594a/70e2fd0/48401e9/Install (ver.: 1.8.0-hunter-p11)
+-- Try GNU code coverage flag = [-O0 -g -fprofile-arcs -ftest-coverage]
+-- Performing Test COVERAGE_FLAG_DETECTED
+-- Performing Test COVERAGE_FLAG_DETECTED - Success
+-- Found gcov evaluation for GNU: /usr/bin/gcov
+-- Could NOT find lcov (missing: LCOV_BIN GENINFO_BIN GENHTML_BIN) 
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug

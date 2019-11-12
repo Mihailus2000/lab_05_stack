@@ -15,7 +15,7 @@
 ########################
 
 //Build coverage
-BUILD_COVERAGE:BOOL=OFF
+BUILD_COVERAGE:BOOL=ON
 
 //Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar
@@ -214,6 +214,24 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//GNU flags for code coverage.
+COVERAGE_GNU_FLAGS:STRING=-O0 -g -fprofile-arcs -ftest-coverage
+
+//Path to a program.
+CPPFILT_BIN:FILEPATH=/usr/bin/c++filt
+
+//Enable coverage build.
+ENABLE_COVERAGE:BOOL=ON
+
+//C gcov binary.
+GCOV_GNU_BIN:STRING=/usr/bin/gcov
+
+//Path to a program.
+GENHTML_BIN:FILEPATH=GENHTML_BIN-NOTFOUND
+
+//Path to a program.
+GENINFO_BIN:FILEPATH=GENINFO_BIN-NOTFOUND
+
 //The directory containing a CMake configuration file for GTest.
 GTest_DIR:PATH=/home/mihail/.hunter/_Base/9a3594a/70e2fd0/48401e9/Install/lib64/cmake/GTest
 
@@ -234,6 +252,9 @@ HUNTER_STATUS_PRINT:BOOL=ON
 
 //Enable/disable TLS certificate checking on downloads
 HUNTER_TLS_VERIFY:BOOL=ON
+
+//Path to a program.
+LCOV_BIN:FILEPATH=LCOV_BIN-NOTFOUND
 
 //Value Computed by CMake
 MyStackRealization_BINARY_DIR:STATIC=/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug
@@ -399,6 +420,10 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Test COVERAGE_FLAG_DETECTED
+COVERAGE_FLAG_DETECTED:INTERNAL=1
+//ADVANCED property for variable: COVERAGE_GNU_FLAGS
+COVERAGE_GNU_FLAGS-ADVANCED:INTERNAL=1
 HUNTER_CACHED_BUILD_SHARED_LIBS:INTERNAL=
 HUNTER_CACHED_CONFIGURATION_TYPES:INTERNAL=Release;Debug
 HUNTER_CACHED_ROOT:INTERNAL=/home/mihail/.hunter

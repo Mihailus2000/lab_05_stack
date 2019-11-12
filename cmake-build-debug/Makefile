@@ -122,6 +122,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named tests
+
+# Build rule for target.
+tests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tests
+.PHONY : tests
+
+# fast build rule for target.
+tests/fast:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
+.PHONY : tests/fast
+
+#=============================================================================
 # Target rules for targets named MyStackRealization
 
 # Build rule for target.
@@ -135,17 +148,43 @@ MyStackRealization/fast:
 .PHONY : MyStackRealization/fast
 
 #=============================================================================
-# Target rules for targets named tests
+# Target rules for targets named gcov
 
 # Build rule for target.
-tests: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tests
-.PHONY : tests
+gcov: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gcov
+.PHONY : gcov
 
 # fast build rule for target.
-tests/fast:
-	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
-.PHONY : tests/fast
+gcov/fast:
+	$(MAKE) -f CMakeFiles/gcov.dir/build.make CMakeFiles/gcov.dir/build
+.PHONY : gcov/fast
+
+#=============================================================================
+# Target rules for targets named tests-gcov
+
+# Build rule for target.
+tests-gcov: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tests-gcov
+.PHONY : tests-gcov
+
+# fast build rule for target.
+tests-gcov/fast:
+	$(MAKE) -f CMakeFiles/tests-gcov.dir/build.make CMakeFiles/tests-gcov.dir/build
+.PHONY : tests-gcov/fast
+
+#=============================================================================
+# Target rules for targets named MyStackRealization-gcov
+
+# Build rule for target.
+MyStackRealization-gcov: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 MyStackRealization-gcov
+.PHONY : MyStackRealization-gcov
+
+# fast build rule for target.
+MyStackRealization-gcov/fast:
+	$(MAKE) -f CMakeFiles/MyStackRealization-gcov.dir/build.make CMakeFiles/MyStackRealization-gcov.dir/build
+.PHONY : MyStackRealization-gcov/fast
 
 sources/Stack.o: sources/Stack.cpp.o
 
@@ -209,9 +248,12 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... test"
-	@echo "... MyStackRealization"
 	@echo "... tests"
+	@echo "... MyStackRealization"
+	@echo "... gcov"
+	@echo "... tests-gcov"
+	@echo "... MyStackRealization-gcov"
+	@echo "... test"
 	@echo "... sources/Stack.o"
 	@echo "... sources/Stack.i"
 	@echo "... sources/Stack.s"

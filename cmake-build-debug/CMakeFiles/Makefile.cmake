@@ -126,6 +126,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/mihail/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.6817.32/bin/cmake/linux/share/cmake-3.15/Modules/CMakeTestCXXCompiler.cmake"
   "/home/mihail/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.6817.32/bin/cmake/linux/share/cmake-3.15/Modules/CMakeTestCompilerCommon.cmake"
   "/home/mihail/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.6817.32/bin/cmake/linux/share/cmake-3.15/Modules/CMakeUnixFindMake.cmake"
+  "/home/mihail/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.6817.32/bin/cmake/linux/share/cmake-3.15/Modules/CheckCCompilerFlag.cmake"
+  "/home/mihail/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.6817.32/bin/cmake/linux/share/cmake-3.15/Modules/CheckCSourceCompiles.cmake"
   "/home/mihail/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.6817.32/bin/cmake/linux/share/cmake-3.15/Modules/Compiler/ADSP-DetermineCompiler.cmake"
   "/home/mihail/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.6817.32/bin/cmake/linux/share/cmake-3.15/Modules/Compiler/ARMCC-DetermineCompiler.cmake"
   "/home/mihail/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.6817.32/bin/cmake/linux/share/cmake-3.15/Modules/Compiler/ARMClang-DetermineCompiler.cmake"
@@ -174,6 +176,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/mihail/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.6817.32/bin/cmake/linux/share/cmake-3.15/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake"
   "/home/mihail/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.6817.32/bin/cmake/linux/share/cmake-3.15/Modules/Compiler/zOS-C-DetermineCompiler.cmake"
   "/home/mihail/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.6817.32/bin/cmake/linux/share/cmake-3.15/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake"
+  "/home/mihail/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.6817.32/bin/cmake/linux/share/cmake-3.15/Modules/FindPackageHandleStandardArgs.cmake"
+  "/home/mihail/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.6817.32/bin/cmake/linux/share/cmake-3.15/Modules/FindPackageMessage.cmake"
   "/home/mihail/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.6817.32/bin/cmake/linux/share/cmake-3.15/Modules/Internal/CMakeCheckCompilerFlag.cmake"
   "/home/mihail/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.6817.32/bin/cmake/linux/share/cmake-3.15/Modules/Internal/FeatureTesting.cmake"
   "/home/mihail/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.6817.32/bin/cmake/linux/share/cmake-3.15/Modules/Platform/Linux-Determine-CXX.cmake"
@@ -189,6 +193,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.15.3/CMakeSystem.cmake"
   "_3rdParty/Hunter/config-id/config.cmake.NOLF"
   "_3rdParty/Hunter/toolchain/toolchain.info.NOLF"
+  "../cmake/FindGcov.cmake"
+  "../cmake/FindLcov.cmake"
+  "../cmake/Findcodecov.cmake"
   "../tools/gate/cmake/HunterGate.cmake"
   )
 
@@ -213,6 +220,9 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/MyStackRealization.dir/DependInfo.cmake"
   "CMakeFiles/tests.dir/DependInfo.cmake"
+  "CMakeFiles/MyStackRealization.dir/DependInfo.cmake"
+  "CMakeFiles/gcov.dir/DependInfo.cmake"
+  "CMakeFiles/tests-gcov.dir/DependInfo.cmake"
+  "CMakeFiles/MyStackRealization-gcov.dir/DependInfo.cmake"
   )

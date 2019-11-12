@@ -53,14 +53,17 @@ CMAKE_BINARY_DIR = /home/mihail/Документы/workspace/02_AL/lab-05-stack/
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/MyStackRealization.dir/all
 all: CMakeFiles/tests.dir/all
+all: CMakeFiles/MyStackRealization.dir/all
 
 .PHONY : all
 
 # The main recursive "clean" target.
-clean: CMakeFiles/MyStackRealization.dir/clean
 clean: CMakeFiles/tests.dir/clean
+clean: CMakeFiles/MyStackRealization.dir/clean
+clean: CMakeFiles/gcov.dir/clean
+clean: CMakeFiles/tests-gcov.dir/clean
+clean: CMakeFiles/MyStackRealization-gcov.dir/clean
 
 .PHONY : clean
 
@@ -68,6 +71,33 @@ clean: CMakeFiles/tests.dir/clean
 preinstall:
 
 .PHONY : preinstall
+
+#=============================================================================
+# Target rules for target CMakeFiles/tests.dir
+
+# All Build rule for target.
+CMakeFiles/tests.dir/all: CMakeFiles/MyStackRealization.dir/all
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/depend
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/CMakeFiles --progress-num=4,5 "Built target tests"
+.PHONY : CMakeFiles/tests.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/tests.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/tests.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/tests.dir/rule
+
+# Convenience name for target.
+tests: CMakeFiles/tests.dir/rule
+
+.PHONY : tests
+
+# clean rule for target.
+CMakeFiles/tests.dir/clean:
+	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/clean
+.PHONY : CMakeFiles/tests.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/MyStackRealization.dir
@@ -97,31 +127,86 @@ CMakeFiles/MyStackRealization.dir/clean:
 .PHONY : CMakeFiles/MyStackRealization.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/tests.dir
+# Target rules for target CMakeFiles/gcov.dir
 
 # All Build rule for target.
-CMakeFiles/tests.dir/all: CMakeFiles/MyStackRealization.dir/all
-	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/depend
-	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target tests"
-.PHONY : CMakeFiles/tests.dir/all
+CMakeFiles/gcov.dir/all: CMakeFiles/tests-gcov.dir/all
+CMakeFiles/gcov.dir/all: CMakeFiles/MyStackRealization-gcov.dir/all
+	$(MAKE) -f CMakeFiles/gcov.dir/build.make CMakeFiles/gcov.dir/depend
+	$(MAKE) -f CMakeFiles/gcov.dir/build.make CMakeFiles/gcov.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/CMakeFiles --progress-num= "Built target gcov"
+.PHONY : CMakeFiles/gcov.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/CMakeFiles 4
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/tests.dir/all
+CMakeFiles/gcov.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/CMakeFiles 6
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/gcov.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/tests.dir/rule
+.PHONY : CMakeFiles/gcov.dir/rule
 
 # Convenience name for target.
-tests: CMakeFiles/tests.dir/rule
+gcov: CMakeFiles/gcov.dir/rule
 
-.PHONY : tests
+.PHONY : gcov
 
 # clean rule for target.
-CMakeFiles/tests.dir/clean:
-	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/clean
-.PHONY : CMakeFiles/tests.dir/clean
+CMakeFiles/gcov.dir/clean:
+	$(MAKE) -f CMakeFiles/gcov.dir/build.make CMakeFiles/gcov.dir/clean
+.PHONY : CMakeFiles/gcov.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/tests-gcov.dir
+
+# All Build rule for target.
+CMakeFiles/tests-gcov.dir/all: CMakeFiles/tests.dir/all
+	$(MAKE) -f CMakeFiles/tests-gcov.dir/build.make CMakeFiles/tests-gcov.dir/depend
+	$(MAKE) -f CMakeFiles/tests-gcov.dir/build.make CMakeFiles/tests-gcov.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/CMakeFiles --progress-num=6 "Built target tests-gcov"
+.PHONY : CMakeFiles/tests-gcov.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/tests-gcov.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/CMakeFiles 5
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/tests-gcov.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/tests-gcov.dir/rule
+
+# Convenience name for target.
+tests-gcov: CMakeFiles/tests-gcov.dir/rule
+
+.PHONY : tests-gcov
+
+# clean rule for target.
+CMakeFiles/tests-gcov.dir/clean:
+	$(MAKE) -f CMakeFiles/tests-gcov.dir/build.make CMakeFiles/tests-gcov.dir/clean
+.PHONY : CMakeFiles/tests-gcov.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/MyStackRealization-gcov.dir
+
+# All Build rule for target.
+CMakeFiles/MyStackRealization-gcov.dir/all: CMakeFiles/MyStackRealization.dir/all
+	$(MAKE) -f CMakeFiles/MyStackRealization-gcov.dir/build.make CMakeFiles/MyStackRealization-gcov.dir/depend
+	$(MAKE) -f CMakeFiles/MyStackRealization-gcov.dir/build.make CMakeFiles/MyStackRealization-gcov.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/CMakeFiles --progress-num=3 "Built target MyStackRealization-gcov"
+.PHONY : CMakeFiles/MyStackRealization-gcov.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/MyStackRealization-gcov.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/MyStackRealization-gcov.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/MyStackRealization-gcov.dir/rule
+
+# Convenience name for target.
+MyStackRealization-gcov: CMakeFiles/MyStackRealization-gcov.dir/rule
+
+.PHONY : MyStackRealization-gcov
+
+# clean rule for target.
+CMakeFiles/MyStackRealization-gcov.dir/clean:
+	$(MAKE) -f CMakeFiles/MyStackRealization-gcov.dir/build.make CMakeFiles/MyStackRealization-gcov.dir/clean
+.PHONY : CMakeFiles/MyStackRealization-gcov.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

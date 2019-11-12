@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/MyStackRealization.dir/sources/Stack.cpp.o"
+  "CMakeFiles/tests.dir/tests/test.cpp.gcda"
+  "CMakeFiles/tests.dir/tests/test.cpp.gcno"
   "libMyStackRealizationd.a"
   "libMyStackRealizationd.pdb"
 )

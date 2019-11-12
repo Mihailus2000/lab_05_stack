@@ -1,5 +1,8 @@
 /home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/CMakeFiles/test.dir
-/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/CMakeFiles/MyStackRealization.dir
 /home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/CMakeFiles/tests.dir
+/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/CMakeFiles/MyStackRealization.dir
+/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/CMakeFiles/gcov.dir
+/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/CMakeFiles/tests-gcov.dir
+/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/CMakeFiles/MyStackRealization-gcov.dir
+/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/CMakeFiles/test.dir

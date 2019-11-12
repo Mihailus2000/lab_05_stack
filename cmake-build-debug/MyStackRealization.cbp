@@ -5,7 +5,7 @@
 		<Option title="MyStackRealization"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\tools\;CMake Files\tools\gate\;CMake Files\tools\gate\cmake\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\.hunter\;CMake Files\..\..\..\..\.hunter\_Base\;CMake Files\..\..\..\..\.hunter\_Base\Download\;CMake Files\..\..\..\..\.hunter\_Base\Download\Hunter\;CMake Files\..\..\..\..\.hunter\_Base\Download\Hunter\0.23.218\;CMake Files\..\..\..\..\.hunter\_Base\Download\Hunter\0.23.218\9a3594a\;CMake Files\..\..\..\..\.hunter\_Base\Download\Hunter\0.23.218\9a3594a\Unpacked\;CMake Files\..\..\..\..\.hunter\_Base\Download\Hunter\0.23.218\9a3594a\Unpacked\cmake\;CMake Files\..\..\..\..\.hunter\_Base\Download\Hunter\0.23.218\9a3594a\Unpacked\cmake\modules\;CMake Files\..\..\..\..\.hunter\_Base\Download\Hunter\0.23.218\9a3594a\Unpacked\cmake\configs\;CMake Files\..\..\..\..\.hunter\_Base\Download\Hunter\0.23.218\9a3594a\Unpacked\cmake\projects\;CMake Files\..\..\..\..\.hunter\_Base\Download\Hunter\0.23.218\9a3594a\Unpacked\cmake\projects\GTest\;CMake Files\..\..\..\..\.hunter\_Base\Download\Hunter\0.23.218\9a3594a\Unpacked\scripts\;CMake Files\..\..\..\..\.hunter\_Base\9a3594a\;CMake Files\..\..\..\..\.hunter\_Base\9a3594a\70e2fd0\;CMake Files\..\..\..\..\.hunter\_Base\9a3594a\70e2fd0\48401e9\;CMake Files\..\..\..\..\.hunter\_Base\9a3594a\70e2fd0\48401e9\Install\;CMake Files\..\..\..\..\.hunter\_Base\9a3594a\70e2fd0\48401e9\Install\lib64\;CMake Files\..\..\..\..\.hunter\_Base\9a3594a\70e2fd0\48401e9\Install\lib64\cmake\;CMake Files\..\..\..\..\.hunter\_Base\9a3594a\70e2fd0\48401e9\Install\lib64\cmake\GTest\;CMake Files\cmake-build-debug\;CMake Files\cmake-build-debug\_3rdParty\;CMake Files\cmake-build-debug\_3rdParty\Hunter\;CMake Files\cmake-build-debug\_3rdParty\Hunter\toolchain\;CMake Files\cmake-build-debug\_3rdParty\Hunter\config-id\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\tools\;CMake Files\tools\gate\;CMake Files\tools\gate\cmake\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\.hunter\;CMake Files\..\..\..\..\.hunter\_Base\;CMake Files\..\..\..\..\.hunter\_Base\Download\;CMake Files\..\..\..\..\.hunter\_Base\Download\Hunter\;CMake Files\..\..\..\..\.hunter\_Base\Download\Hunter\0.23.218\;CMake Files\..\..\..\..\.hunter\_Base\Download\Hunter\0.23.218\9a3594a\;CMake Files\..\..\..\..\.hunter\_Base\Download\Hunter\0.23.218\9a3594a\Unpacked\;CMake Files\..\..\..\..\.hunter\_Base\Download\Hunter\0.23.218\9a3594a\Unpacked\cmake\;CMake Files\..\..\..\..\.hunter\_Base\Download\Hunter\0.23.218\9a3594a\Unpacked\cmake\modules\;CMake Files\..\..\..\..\.hunter\_Base\Download\Hunter\0.23.218\9a3594a\Unpacked\cmake\configs\;CMake Files\..\..\..\..\.hunter\_Base\Download\Hunter\0.23.218\9a3594a\Unpacked\cmake\projects\;CMake Files\..\..\..\..\.hunter\_Base\Download\Hunter\0.23.218\9a3594a\Unpacked\cmake\projects\GTest\;CMake Files\..\..\..\..\.hunter\_Base\Download\Hunter\0.23.218\9a3594a\Unpacked\scripts\;CMake Files\..\..\..\..\.hunter\_Base\9a3594a\;CMake Files\..\..\..\..\.hunter\_Base\9a3594a\70e2fd0\;CMake Files\..\..\..\..\.hunter\_Base\9a3594a\70e2fd0\48401e9\;CMake Files\..\..\..\..\.hunter\_Base\9a3594a\70e2fd0\48401e9\Install\;CMake Files\..\..\..\..\.hunter\_Base\9a3594a\70e2fd0\48401e9\Install\lib64\;CMake Files\..\..\..\..\.hunter\_Base\9a3594a\70e2fd0\48401e9\Install\lib64\cmake\;CMake Files\..\..\..\..\.hunter\_Base\9a3594a\70e2fd0\48401e9\Install\lib64\cmake\GTest\;CMake Files\cmake-build-debug\;CMake Files\cmake-build-debug\_3rdParty\;CMake Files\cmake-build-debug\_3rdParty\Hunter\;CMake Files\cmake-build-debug\_3rdParty\Hunter\toolchain\;CMake Files\cmake-build-debug\_3rdParty\Hunter\config-id\;CMake Files\cmake\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug"/>
@@ -37,11 +37,49 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="test">
+			<Target title="tests">
+				<Option output="/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/tests" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug"/>
-				<Option type="4"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/mihail/Документы/workspace/02_AL/lab-05-stack/include"/>
+					<Add directory="/home/mihail/.hunter/_Base/9a3594a/70e2fd0/48401e9/Install/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/c++/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/Makefile&quot;  VERBOSE=1 test"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/Makefile&quot;  VERBOSE=1 tests"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tests/fast">
+				<Option output="/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/tests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/mihail/Документы/workspace/02_AL/lab-05-stack/include"/>
+					<Add directory="/home/mihail/.hunter/_Base/9a3594a/70e2fd0/48401e9/Install/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/c++"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/c++/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/c++/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/Makefile&quot;  VERBOSE=1 tests/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -93,49 +131,41 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="tests">
-				<Option output="/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/tests" prefix_auto="0" extension_auto="0"/>
+			<Target title="gcov">
 				<Option working_dir="/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/mihail/Документы/workspace/02_AL/lab-05-stack/include"/>
-					<Add directory="/home/mihail/.hunter/_Base/9a3594a/70e2fd0/48401e9/Install/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/c++"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/c++/x86_64-pc-linux-gnu"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/c++/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include-fixed"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
+				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/Makefile&quot;  VERBOSE=1 tests"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/Makefile&quot;  VERBOSE=1 gcov"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="tests/fast">
-				<Option output="/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/tests" prefix_auto="0" extension_auto="0"/>
+			<Target title="tests-gcov">
 				<Option working_dir="/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/mihail/Документы/workspace/02_AL/lab-05-stack/include"/>
-					<Add directory="/home/mihail/.hunter/_Base/9a3594a/70e2fd0/48401e9/Install/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/c++"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/c++/x86_64-pc-linux-gnu"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include/c++/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.3.0/include-fixed"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
+				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/Makefile&quot;  VERBOSE=1 tests/fast"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/Makefile&quot;  VERBOSE=1 tests-gcov"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="MyStackRealization-gcov">
+				<Option working_dir="/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/Makefile&quot;  VERBOSE=1 MyStackRealization-gcov"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test">
+				<Option working_dir="/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/Makefile&quot;  VERBOSE=1 test"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -429,6 +459,15 @@
 		</Unit>
 		<Unit filename="/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake-build-debug/_3rdParty/Hunter/config-id/config.cmake.NOLF">
 			<Option virtualFolder="CMake Files\cmake-build-debug\_3rdParty\Hunter\config-id\"/>
+		</Unit>
+		<Unit filename="/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake/FindGcov.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake/FindLcov.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/mihail/Документы/workspace/02_AL/lab-05-stack/cmake/Findcodecov.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>
