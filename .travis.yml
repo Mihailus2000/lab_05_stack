@@ -16,9 +16,9 @@ jobs:
   - name: "quality"
     script:
     - ./scripts/genenv.sh
-    - docker run --env-file .env -v `pwd`:`pwd` -w `pwd` -t toliak/bootstrap-cpp scripts/coverage.sh
+    - docker run --env-file .env -v `pwd`:`pwd` -w `pwd` -t --entrypoint scripts/coverage.sh toliak/bootstrap-cpp
     # The bot has gone...
-    # - docker run --env-file .env -v `pwd`:`pwd` -w `pwd` -t rusdevops/bootstrap-cpp scripts/duplication.sh
+    # - docker run --env-file .env -v `pwd`:`pwd` -w `pwd` -t --entrypoint scripts/duplication.sh rusdevops/bootstrap-cpp
 
 notifications:
     email: false
