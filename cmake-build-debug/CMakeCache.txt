@@ -38,8 +38,8 @@ CMAKE_CODEBLOCKS_MAKE_ARGUMENTS:STRING=-j4
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
-//CXX compiler
-CMAKE_CXX_COMPILER:STRING=/usr/bin/g++-8
+//No help, variable specified on the command line.
+CMAKE_CXX_COMPILER:UNINITIALIZED=g++-8
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -64,8 +64,8 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 //Flags used by the CXX compiler during RELWITHDEBINFO builds.
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
-//C compiler
-CMAKE_C_COMPILER:STRING=/usr/bin/gcc-8
+//No help, variable specified on the command line.
+CMAKE_C_COMPILER:UNINITIALIZED=gcc-8
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -231,9 +231,6 @@ GENHTML_BIN:FILEPATH=GENHTML_BIN-NOTFOUND
 
 //Path to a program.
 GENINFO_BIN:FILEPATH=GENINFO_BIN-NOTFOUND
-
-//The directory containing a CMake configuration file for GTest.
-GTest_DIR:PATH=/home/mihail/.hunter/_Base/9a3594a/70e2fd0/48401e9/Install/lib64/cmake/GTest
 
 //Default cache server
 HUNTER_CACHE_SERVERS:STRING=https://github.com/bmstu-iu8-cpp-sem-3/hunter-cache
@@ -429,7 +426,7 @@ HUNTER_CACHED_CONFIGURATION_TYPES:INTERNAL=Release;Debug
 HUNTER_CACHED_ROOT:INTERNAL=/home/mihail/.hunter
 HUNTER_CONFIG_SHA1:INTERNAL=48401e91ef616412f60c581f51bc87c769b0930f
 HUNTER_SHA1:INTERNAL=9a3594a61227967fb92159339ba326701b287b19
-HUNTER_TOOLCHAIN_SHA1:INTERNAL=70e2fd0a0268c849c75e19eda40ad7c26e6f5c52
+HUNTER_TOOLCHAIN_SHA1:INTERNAL=bcfb5921477a1795cc74a60eda12d92597e51f36
 HUNTER_URL:INTERNAL=https://github.com/cpp-pm/hunter/archive/v0.23.218.tar.gz
 HUNTER_VERSION:INTERNAL=0.23.218
 //ADVANCED property for variable: ProcessorCount_cmd_nproc
