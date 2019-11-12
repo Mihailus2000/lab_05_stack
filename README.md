@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/Mihailus2000/lab_05_stack.svg?branch=master)](https://travis-ci.org/Mihailus2000/lab_05_stack)
+
+
 # Лабораторная работа №5
 
 ## Задание 1
