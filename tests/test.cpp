@@ -3,31 +3,31 @@
 #include "Stack.hpp"
 
 
-class StackFixture: public ::testing::Test
+class StackTestFixture: public ::testing::Test
 {
 protected:
-    struct Copyable
+    struct CopyableClass
     {
-        Copyable() = default;
-        Copyable(const Copyable &) = default;
-        Copyable(Copyable &&) = default;
+        CopyableClass() = default;
+        CopyableClass(const CopyableClass &) = default;
+        CopyableClass(CopyableClass &&) = default;
 
         int value = 0;
     };
 
-    struct NotCopyable
+    struct NotCopyableClass
     {
-        NotCopyable() = default;
-        NotCopyable(const NotCopyable &) = delete;
-        NotCopyable(NotCopyable &&) = default;
+        NotCopyableClass() = default;
+        NotCopyableClass(const NotCopyableClass &) = delete;
+        NotCopyableClass(NotCopyableClass &&) = default;
 
         int value = 0;
     };
 
-    Stack<Copyable> copyableStack{};
-    Stack<Copyable> copyableStackEmpty{};
-    NoCopyableStack<NotCopyable> notCopyableStack{};
-    NoCopyableStack<NotCopyable> notCopyableStackEmpty{};
+    Stack<CopyableClass> copyableStack{};
+    Stack<CopyableClass> copyableStackEmpty{};
+    NoCopyableStack<NotCopyableClass> notCopyableStack{};
+    NoCopyableStack<NotCopyableClass> notCopyableStackEmpty{};
     Stack<std::string> stringStackEmpty{};
 
     void SetUp() override
@@ -51,23 +51,23 @@ protected:
     }
 };
 
-TEST_F(StackFixture, TestForTest)
+TEST_F(StackTestFixture, TestForTest)
 {
-    EXPECT_EQ(std::is_move_constructible_v<Copyable>, true);
-    EXPECT_EQ(std::is_copy_constructible_v<Copyable>, true);
+    EXPECT_EQ(std::is_move_constructible_v<CopyableClass>, true);
+    EXPECT_EQ(std::is_copy_constructible_v<CopyableClass>, true);
 
-    EXPECT_EQ(std::is_move_constructible_v<NotCopyable>, true);
-    EXPECT_EQ(std::is_copy_constructible_v<NotCopyable>, false);
+    EXPECT_EQ(std::is_move_constructible_v<NotCopyableClass>, true);
+    EXPECT_EQ(std::is_copy_constructible_v<NotCopyableClass>, false);
 }
 
-TEST_F(StackFixture, Constructors)
+TEST_F(StackTestFixture, Constructors)
 {
     EXPECT_EQ(std::is_move_constructible_v<Stack<int>>, true);
     EXPECT_EQ(std::is_copy_constructible_v<Stack<int>>, false);
     EXPECT_EQ(std::is_copy_assignable_v<Stack<int>>, false);
 }
 
-TEST_F(StackFixture, PushMove)
+TEST_F(StackTestFixture, PushMove)
 {
     std::string string{"I am a string"};
     stringStackEmpty.push(std::move(string));
@@ -75,30 +75,30 @@ TEST_F(StackFixture, PushMove)
     EXPECT_EQ(stringStackEmpty.head(), std::string{"I am a string"});
 }
 
-TEST_F(StackFixture, PushCopy)
+TEST_F(StackTestFixture, PushCopy)
 {
-    Copyable copyable{60};
+    CopyableClass copyable{60};
     copyableStackEmpty.push(copyable);
 
     EXPECT_EQ(copyableStackEmpty.head().value, 60);
 }
 
-TEST_F(StackFixture, PushEmplace)
+TEST_F(StackTestFixture, PushEmplace)
 {
     notCopyableStackEmpty.push_emplace(600);
 
     EXPECT_EQ(notCopyableStackEmpty.head().value, 600);
 }
 
-TEST_F(StackFixture, PopSfinaeNotCopy)
+TEST_F(StackTestFixture, PopSfinaeNotCopy)
 {
     using PopType = decltype(notCopyableStack.pop());
-    constexpr bool isSame = std::is_same_v<PopType, NotCopyable>;
+    constexpr bool isSame = std::is_same_v<PopType, NotCopyableClass>;
 
     EXPECT_EQ(isSame, true);
 }
 
-TEST_F(StackFixture, PopSfinaeCopy)
+TEST_F(StackTestFixture, PopSfinaeCopy)
 {
     using PopType = decltype(copyableStack.pop());
     constexpr bool isSame = std::is_same_v<PopType, void>;
@@ -106,7 +106,7 @@ TEST_F(StackFixture, PopSfinaeCopy)
     EXPECT_EQ(isSame, true);
 }
 
-TEST_F(StackFixture, PopCopy)
+TEST_F(StackTestFixture, PopCopy)
 {
     EXPECT_EQ(copyableStack.head().value, 5);
 
@@ -115,22 +115,22 @@ TEST_F(StackFixture, PopCopy)
     EXPECT_EQ(copyableStack.head().value, 4);
 }
 
-TEST_F(StackFixture, PopNotCopy)
+TEST_F(StackTestFixture, PopNotCopy)
 {
     EXPECT_EQ(notCopyableStack.head().value, 5);
 
-    NotCopyable value = notCopyableStack.pop();
+    NotCopyableClass value = notCopyableStack.pop();
 
     EXPECT_EQ(notCopyableStack.head().value, 4);
     EXPECT_EQ(value.value, 5);
 }
 
-TEST_F(StackFixture, Head)
+TEST_F(StackTestFixture, Head)
 {
     EXPECT_EQ(copyableStack.head().value, 5);
 }
 
-TEST_F(StackFixture, PopEmpty)
+TEST_F(StackTestFixture, PopEmpty)
 {
     EXPECT_THROW(
             copyableStackEmpty.pop(),
@@ -138,7 +138,7 @@ TEST_F(StackFixture, PopEmpty)
     );
 }
 
-TEST_F(StackFixture, PopEmptyNotCopyable)
+TEST_F(StackTestFixture, PopEmptyNotCopyable)
 {
     EXPECT_THROW(
             notCopyableStackEmpty.pop(),
@@ -146,7 +146,7 @@ TEST_F(StackFixture, PopEmptyNotCopyable)
     );
 }
 
-TEST_F(StackFixture, HeadEmpty)
+TEST_F(StackTestFixture, HeadEmpty)
 {
     EXPECT_THROW(
             copyableStackEmpty.head(),
